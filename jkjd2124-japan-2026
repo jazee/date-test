@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Japan Trip</title>
+  <style>
+    body {
+      font-family: -apple-system, system-ui, sans-serif;
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #f6f6f6;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 14px;
+      margin-bottom: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+    h1, h2 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Japan Trip</h1>
+
+  <div class="card">
+    <h2>Flights</h2>
+    <p>UA 837: SFO to Tokyo</p>
+    <p>UA 838: Tokyo to SFO</p>
+  </div>
+
+  <div class="card">
+    <h2>Tokyo</h2>
+    <p>Hotel: TBD</p>
+    <p>Ideas: Shibuya, teamLab, sushi</p>
+  </div>
+
+  <div class="card">
+    <h2>Kyoto</h2>
+    <p>Ideas: Fushimi Inari, Arashiyama, Gion</p>
+  </div>
+</body>
+</html>
