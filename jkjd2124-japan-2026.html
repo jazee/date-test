@@ -5,138 +5,137 @@
 <title>Japan Trip 2026</title>
 
 <style>
-body {
-  font-family: -apple-system, system-ui, sans-serif;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 24px;
-  background: #f5f5f5;
+
+body{
+  font-family:-apple-system, system-ui, sans-serif;
+  max-width:700px;
+  margin:auto;
+  padding:24px;
+  background:#f5f5f5;
 }
 
-h1 {
-  margin-bottom: 20px;
+h1{
+  margin-bottom:20px;
 }
 
-.button-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px,1fr));
-  gap: 10px;
-  margin-bottom: 30px;
+button{
+  width:100%;
+  padding:16px;
+  margin-bottom:10px;
+  font-size:16px;
+  border:none;
+  border-radius:12px;
+  background:#1f6feb;
+  color:white;
+  font-weight:600;
+  cursor:pointer;
 }
 
-button {
-  padding: 14px;
-  border-radius: 10px;
-  border: none;
-  background: #1f6feb;
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
+button:hover{
+  background:#1558b0;
 }
 
-button:hover {
-  background: #1558b0;
+.day{
+  display:none;
+  background:white;
+  padding:20px;
+  border-radius:14px;
+  margin-top:20px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
 }
 
-.day {
-  display: none;
-  background: white;
-  padding: 20px;
-  border-radius: 14px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+.day.active{
+  display:block;
 }
 
-.day.active {
-  display: block;
-}
 </style>
 
 <script>
-function showDay(dayId) {
-  const days = document.querySelectorAll('.day')
-  days.forEach(d => d.classList.remove('active'))
+
+function showDay(dayId){
+  const days=document.querySelectorAll('.day')
+  days.forEach(d=>d.classList.remove('active'))
 
   document.getElementById(dayId).classList.add('active')
 }
+
 </script>
 
 </head>
 
 <body>
 
-<h1>Japan Trip 2026 🇯🇵</h1>
+<h1>Japan Trip 🇯🇵</h1>
 
-<div class="button-grid">
 
-<button onclick="showDay('d12')">Mar 12</button>
-<button onclick="showDay('d13')">Mar 13</button>
-<button onclick="showDay('d14')">Mar 14</button>
-<button onclick="showDay('d15')">Mar 15</button>
-<button onclick="showDay('d16')">Mar 16</button>
-<button onclick="showDay('d17')">Mar 17</button>
-<button onclick="showDay('d18')">Mar 18</button>
-<button onclick="showDay('d19')">Mar 19</button>
-<button onclick="showDay('d20')">Mar 20</button>
-<button onclick="showDay('d21')">Mar 21</button>
-<button onclick="showDay('d22')">Mar 22</button>
-
-</div>
+<button onclick="showDay('d12')">Wednesday — March 12</button>
+<button onclick="showDay('d13')">Thursday — March 13</button>
+<button onclick="showDay('d14')">Friday — March 14</button>
+<button onclick="showDay('d15')">Saturday — March 15</button>
+<button onclick="showDay('d16')">Sunday — March 16</button>
+<button onclick="showDay('d17')">Monday — March 17</button>
+<button onclick="showDay('d18')">Tuesday — March 18</button>
+<button onclick="showDay('d19')">Wednesday — March 19</button>
+<button onclick="showDay('d20')">Thursday — March 20</button>
+<button onclick="showDay('d21')">Friday — March 21</button>
+<button onclick="showDay('d22')">Saturday — March 22</button>
 
 
 <div id="d12" class="day">
-<h2>March 12</h2>
+<h2>Wednesday — March 12</h2>
 <p>March 12 travel details here</p>
 </div>
 
 <div id="d13" class="day">
-<h2>March 13</h2>
+<h2>Thursday — March 13</h2>
 <p>March 13 travel details here</p>
 </div>
 
 <div id="d14" class="day">
-<h2>March 14</h2>
+<h2>Friday — March 14</h2>
 <p>March 14 travel details here</p>
 </div>
 
 <div id="d15" class="day">
-<h2>March 15</h2>
+<h2>Saturday — March 15</h2>
 <p>March 15 travel details here</p>
 </div>
 
 <div id="d16" class="day">
-<h2>March 16</h2>
+<h2>Sunday — March 16</h2>
 <p>March 16 travel details here</p>
 </div>
 
 <div id="d17" class="day">
-<h2>March 17</h2>
+<h2>Monday — March 17</h2>
 <p>March 17 travel details here</p>
 </div>
 
 <div id="d18" class="day">
-<h2>March 18</h2>
+<h2>Tuesday — March 18</h2>
 <p>March 18 travel details here</p>
 </div>
 
 <div id="d19" class="day">
-<h2>March 19</h2>
+<h2>Wednesday — March 19</h2>
 <p>March 19 travel details here</p>
 </div>
 
 <div id="d20" class="day">
-<h2>March 20</h2>
+<h2>Thursday — March 20</h2>
 <p>March 20 travel details here</p>
 </div>
 
 <div id="d21" class="day">
-<h2>March 21</h2>
+<h2>Friday — March 21</h2>
 <p>March 21 travel details here</p>
 </div>
 
 <div id="d22" class="day">
-<h2>March 22</h2>
+<h2>Saturday — March 22</h2>
 <p>March 22 travel details here</p>
 </div>
+
 
 </body>
 </html>
