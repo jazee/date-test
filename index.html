@@ -1,145 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Today</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Japan Trip</title>
 
-  <meta name="theme-color" content="#ff6a00" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-  <meta name="apple-mobile-web-app-title" content="Today" />
+<style>
+body{
+font-family:-apple-system,system-ui;
+background:#f5f5f5;
+padding:40px;
+max-width:700px;
+margin:auto;
+}
 
-  <style>
-    :root {
-      --bg1: #fff7f0;
-      --bg2: #ffe1c2;
-      --card: #ffffff;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --accent: #ff6a00;
-      --shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
-      --radius: 22px;
-    }
+.card{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+margin-bottom:20px;
+}
 
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
-      color: var(--text);
-      background: linear-gradient(160deg, var(--bg1), var(--bg2));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
-    }
-
-    .app {
-      width: 100%;
-      max-width: 420px;
-      background: var(--card);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 28px 24px;
-      text-align: center;
-      animation: floatIn 0.45s ease-out;
-    }
-
-    .label {
-      font-size: 14px;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 10px;
-    }
-
-    .date {
-      font-size: 34px;
-      line-height: 1.15;
-      font-weight: 700;
-      margin: 0 0 12px;
-    }
-
-    .subtext {
-      font-size: 16px;
-      color: var(--muted);
-      margin-bottom: 24px;
-    }
-
-    .button {
-      appearance: none;
-      border: none;
-      background: var(--accent);
-      color: white;
-      font-size: 16px;
-      font-weight: 700;
-      padding: 14px 18px;
-      border-radius: 14px;
-      cursor: pointer;
-      width: 100%;
-      transition: transform 0.12s ease, opacity 0.12s ease;
-    }
-
-    .button:active {
-      transform: scale(0.98);
-      opacity: 0.92;
-    }
-
-    .hint {
-      margin-top: 16px;
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    @keyframes floatIn {
-      from {
-        opacity: 0;
-        transform: translateY(16px) scale(0.98);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
-    }
-  </style>
+h1{margin-top:0}
+</style>
 </head>
+
 <body>
-  <main class="app">
-    <div class="label">Today is</div>
-    <h1 class="date" id="dateText">Loading...</h1>
-    <div class="subtext" id="timeText"></div>
-    <button class="button" id="refreshBtn">Refresh</button>
-    <div class="hint">Tip: Add this page to your home screen.</div>
-  </main>
 
-  <script>
-    function renderDate() {
-      const now = new Date();
+<h1>Japan Trip Plan 🇯🇵</h1>
 
-      const dateString = now.toLocaleDateString(undefined, {
-        weekday: "long",
-        month: "long",
-        day: "numeric",
-        year: "numeric"
-      });
+<div class="card">
+<h2>Flights</h2>
+<p>UA 837 – SFO → Tokyo</p>
+<p>UA 838 – Tokyo → SFO</p>
+</div>
 
-      const timeString = now.toLocaleTimeString(undefined, {
-        hour: "numeric",
-        minute: "2-digit"
-      });
+<div class="card">
+<h2>Tokyo</h2>
+<p>Hotel: TBD</p>
+<p>Visit:</p>
+<ul>
+<li>Shibuya Crossing</li>
+<li>TeamLab Planets</li>
+<li>Sushi Dai</li>
+</ul>
+</div>
 
-      document.getElementById("dateText").textContent = dateString;
-      document.getElementById("timeText").textContent = `Current time: ${timeString}`;
-    }
+<div class="card">
+<h2>Kyoto</h2>
+<ul>
+<li>Fushimi Inari Shrine</li>
+<li>Arashiyama Bamboo Forest</li>
+<li>Kaiseki dinner</li>
+</ul>
+</div>
 
-    document.getElementById("refreshBtn").addEventListener("click", renderDate);
-
-    renderDate();
-  </script>
 </body>
 </html>
