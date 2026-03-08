@@ -5,16 +5,21 @@
 <title>Japan Trip 2026</title>
 
 <style>
-
 body{
   font-family:-apple-system, system-ui, sans-serif;
   max-width:700px;
   margin:auto;
   padding:24px;
   background:#f5f5f5;
+  color:#222;
 }
 
 h1{
+  margin-bottom:8px;
+}
+
+.subtitle{
+  color:#666;
   margin-bottom:20px;
 }
 
@@ -29,6 +34,7 @@ button{
   color:white;
   font-weight:600;
   cursor:pointer;
+  text-align:left;
 }
 
 button:hover{
@@ -48,17 +54,45 @@ button:hover{
   display:block;
 }
 
+.card{
+  background:#fafafa;
+  border:1px solid #e6e6e6;
+  border-radius:12px;
+  padding:16px;
+  margin-top:14px;
+}
+
+.label{
+  font-size:12px;
+  font-weight:700;
+  color:#666;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+  margin-bottom:6px;
+}
+
+.small{
+  color:#666;
+  font-size:14px;
+}
+
+ul{
+  margin:8px 0 0 18px;
+  padding:0;
+}
+
+li{
+  margin-bottom:6px;
+}
 </style>
 
 <script>
-
 function showDay(dayId){
-  const days=document.querySelectorAll('.day')
-  days.forEach(d=>d.classList.remove('active'))
-
-  document.getElementById(dayId).classList.add('active')
+  const days = document.querySelectorAll('.day');
+  days.forEach(d => d.classList.remove('active'));
+  document.getElementById(dayId).classList.add('active');
+  window.scrollTo({ top: document.getElementById(dayId).offsetTop - 12, behavior: 'smooth' });
 }
-
 </script>
 
 </head>
@@ -66,76 +100,113 @@ function showDay(dayId){
 <body>
 
 <h1>Japan Trip 🇯🇵</h1>
+<div class="subtitle">JK + wife + daughter</div>
 
-
-<button onclick="showDay('d12')">Wednesday — March 12</button>
-<button onclick="showDay('d13')">Thursday — March 13</button>
-<button onclick="showDay('d14')">Friday — March 14</button>
-<button onclick="showDay('d15')">Saturday — March 15</button>
-<button onclick="showDay('d16')">Sunday — March 16</button>
-<button onclick="showDay('d17')">Monday — March 17</button>
-<button onclick="showDay('d18')">Tuesday — March 18</button>
-<button onclick="showDay('d19')">Wednesday — March 19</button>
-<button onclick="showDay('d20')">Thursday — March 20</button>
-<button onclick="showDay('d21')">Friday — March 21</button>
-<button onclick="showDay('d22')">Saturday — March 22</button>
-
+<button onclick="showDay('d12')">Thursday · March 12</button>
+<button onclick="showDay('d13')">Friday · March 13</button>
+<button onclick="showDay('d14')">Saturday · March 14</button>
+<button onclick="showDay('d15')">Sunday · March 15</button>
+<button onclick="showDay('d16')">Monday · March 16</button>
+<button onclick="showDay('d17')">Tuesday · March 17</button>
+<button onclick="showDay('d18')">Wednesday · March 18</button>
+<button onclick="showDay('d19')">Thursday · March 19</button>
+<button onclick="showDay('d20')">Friday · March 20</button>
+<button onclick="showDay('d21')">Saturday · March 21</button>
+<button onclick="showDay('d22')">Sunday · March 22</button>
 
 <div id="d12" class="day">
-<h2>Wednesday — March 12</h2>
-<p>March 12 travel details here</p>
+  <h2>Thursday · March 12</h2>
+  <p>Travel day. Depart San Francisco for Tokyo.</p>
+
+  <div class="card">
+    <div class="label">Outbound Flight</div>
+    <p><strong>United UA 837</strong></p>
+    <ul>
+      <li>Depart: <strong>11:40 AM</strong></li>
+      <li>From: <strong>SFO</strong>, San Francisco, CA</li>
+      <li>To: <strong>NRT</strong>, Tokyo, Japan</li>
+      <li>Duration: <strong>11h 20m</strong></li>
+      <li>Aircraft: <strong>Boeing 777-200</strong></li>
+      <li>Fare Class: <strong>United Economy (S)</strong></li>
+      <li>Seats: <strong>32D, 32F, 32G</strong></li>
+    </ul>
+    <p class="small">Arrival is on Friday, March 13 at 3:00 PM Tokyo time.</p>
+  </div>
 </div>
 
 <div id="d13" class="day">
-<h2>Thursday — March 13</h2>
-<p>March 13 travel details here</p>
+  <h2>Friday · March 13</h2>
+  <p>Arrive in Tokyo.</p>
+
+  <div class="card">
+    <div class="label">Arrival</div>
+    <ul>
+      <li>Arrive: <strong>3:00 PM</strong></li>
+      <li>Airport: <strong>NRT</strong>, Tokyo, Japan</li>
+      <li>Flight: <strong>United UA 837</strong></li>
+    </ul>
+  </div>
 </div>
 
 <div id="d14" class="day">
-<h2>Friday — March 14</h2>
-<p>March 14 travel details here</p>
+  <h2>Saturday · March 14</h2>
+  <p>March 14 travel details here</p>
 </div>
 
 <div id="d15" class="day">
-<h2>Saturday — March 15</h2>
-<p>March 15 travel details here</p>
+  <h2>Sunday · March 15</h2>
+  <p>March 15 travel details here</p>
 </div>
 
 <div id="d16" class="day">
-<h2>Sunday — March 16</h2>
-<p>March 16 travel details here</p>
+  <h2>Monday · March 16</h2>
+  <p>March 16 travel details here</p>
 </div>
 
 <div id="d17" class="day">
-<h2>Monday — March 17</h2>
-<p>March 17 travel details here</p>
+  <h2>Tuesday · March 17</h2>
+  <p>March 17 travel details here</p>
 </div>
 
 <div id="d18" class="day">
-<h2>Tuesday — March 18</h2>
-<p>March 18 travel details here</p>
+  <h2>Wednesday · March 18</h2>
+  <p>March 18 travel details here</p>
 </div>
 
 <div id="d19" class="day">
-<h2>Wednesday — March 19</h2>
-<p>March 19 travel details here</p>
+  <h2>Thursday · March 19</h2>
+  <p>March 19 travel details here</p>
 </div>
 
 <div id="d20" class="day">
-<h2>Thursday — March 20</h2>
-<p>March 20 travel details here</p>
+  <h2>Friday · March 20</h2>
+  <p>March 20 travel details here</p>
 </div>
 
 <div id="d21" class="day">
-<h2>Friday — March 21</h2>
-<p>March 21 travel details here</p>
+  <h2>Saturday · March 21</h2>
+  <p>March 21 travel details here</p>
 </div>
 
 <div id="d22" class="day">
-<h2>Saturday — March 22</h2>
-<p>March 22 travel details here</p>
-</div>
+  <h2>Sunday · March 22</h2>
+  <p>Travel home from Tokyo to San Francisco.</p>
 
+  <div class="card">
+    <div class="label">Return Flight</div>
+    <p><strong>United UA 838</strong></p>
+    <ul>
+      <li>Depart: <strong>4:45 PM</strong></li>
+      <li>From: <strong>NRT</strong>, Tokyo, Japan</li>
+      <li>Arrive: <strong>10:15 AM</strong></li>
+      <li>To: <strong>SFO</strong>, San Francisco, CA</li>
+      <li>Duration: <strong>9h 30m</strong></li>
+      <li>Aircraft: <strong>Boeing 777-200</strong></li>
+      <li>Fare Class: <strong>United Economy (S)</strong></li>
+      <li>Seats: <strong>34J, 34K, 34L</strong></li>
+    </ul>
+  </div>
+</div>
 
 </body>
 </html>
