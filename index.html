@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Date</title>
+<style>
+body{
+font-family:-apple-system,system-ui;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+background:#f4f4f4;
+}
+
+#date{
+font-size:36px;
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+</style>
+</head>
+
+<body>
+
+<div id="date"></div>
+
+<script>
+const today = new Date()
+
+const formatted = today.toLocaleDateString(undefined,{
+weekday:"long",
+year:"numeric",
+month:"long",
+day:"numeric"
+})
+
+document.getElementById("date").innerText = formatted
+</script>
+
+</body>
+</html>
