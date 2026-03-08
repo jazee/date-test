@@ -12,6 +12,10 @@ body{
   padding:24px;
   background:#f5f5f5;
   color:#222;
+  .today{
+  border:2px solid #ff6a00;
+  background:#fff6ef;
+}
 }
 
 h1{
@@ -92,6 +96,26 @@ function showDay(dayId){
   days.forEach(d => d.classList.remove('active'));
   document.getElementById(dayId).classList.add('active');
   window.scrollTo({ top: document.getElementById(dayId).offsetTop - 12, behavior: 'smooth' });
+  document.addEventListener("DOMContentLoaded", function(){
+
+  const start = new Date("2026-03-12")
+  const today = new Date()
+
+  const diff = Math.floor((today - start) / (1000*60*60*24)) + 12
+
+  if(diff >= 12 && diff <= 22){
+
+    const id = "d" + diff
+    const el = document.getElementById(id)
+
+    if(el){
+      el.classList.add("today")
+      showDay(id)
+    }
+
+  }
+
+})
 }
 </script>
 
